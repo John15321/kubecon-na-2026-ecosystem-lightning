@@ -52,6 +52,7 @@ author: Jan Bronicki
 - **Next:** full-disk encryption, a more automated release pipeline
 - **You:** good first issues, docs, testing new platforms, sysext images
 - Find us: **Project Pavilion, kiosk P-8A**, Hall 5, Cosmic Canyon Zone
+- Shifts: **Tue 3-7 PM, Wed 1:55-5 PM, Thu 12:25-2 PM** (MST)
 
 ---
 
