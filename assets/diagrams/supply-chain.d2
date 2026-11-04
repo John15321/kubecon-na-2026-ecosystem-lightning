@@ -1,0 +1,49 @@
+vars: {
+  d2-config: {
+    pad: 24
+    sketch: false
+  }
+}
+
+classes: {
+  step: {
+    style: {
+      fill: "#09BAC8"
+      stroke: "#12172B"
+      stroke-width: 3
+      font-color: "#12172B"
+      font-size: 30
+      border-radius: 12
+      shadow: true
+      bold: true
+    }
+  }
+  node: {
+    style: {
+      fill: "#F6B73C"
+      stroke: "#12172B"
+      stroke-width: 3
+      font-color: "#12172B"
+      font-size: 30
+      border-radius: 12
+      shadow: true
+      bold: true
+    }
+  }
+  arrow: {
+    style: {
+      stroke: "#12172B"
+      stroke-width: 4
+    }
+  }
+}
+
+direction: right
+
+src: "Source\ntwo-person reviewed" { class: step }
+build: "Build\nephemeral, from source" { class: step }
+prov: "SBOM + provenance\nSPDX and SLSA" { class: step }
+sign: "Signed update\nkey in an HSM" { class: step }
+boot: "Your node\ndm-verity checked\nat every boot" { class: node }
+
+src -> build -> prov -> sign -> boot: { class: arrow }
