@@ -26,50 +26,58 @@ author: Jan Bronicki
 
 ---
 
-# Growing in the CNCF
+# Our mission: a boring, secure OS for containers
 
-- CNCF **incubating** project, with graduation on the roadmap
-- Runs Kubernetes nodes on the major clouds and bare metal
-- Alpha, Beta, Stable and LTS channels, each release tested across clouds before it ships
-- Extensible by design: Docker, containerd, Podman and GPU drivers ship as **sysexts**
-
----
-
-# Supply chain integrity
-
-<img style="width: 100%; margin-top: 0" src="assets/diagrams/supply-chain.svg" alt="Pipeline: reviewed source, ephemeral build, SLSA provenance, HSM-signed update, dm-verity checked at boot">
-
-- Signed **SPDX SBOM** published with every image
-- Assessed at **SLSA Level 3**, per-package provenance in `/usr/share/SLSA/`
-- Coming: **VEX files** with every release, so you know which CVEs matter
-- Next: TPM chain of trust, scalable release signing
+- **The problem:** everything in our stack is code except the OS
+- **Our answer:** **Operating System as Code**
+- **Immutable:** read-only `/usr`, verified at boot, atomic updates with rollback
+- **Cloud agnostic:** runs Kubernetes nodes on every major cloud and bare metal
+- **Fully open:** free and open-source, community-driven
+- **Secure by default:** minimal, signed, tested before every release
 
 ---
 
-# Roadmap, and where you can help
+# Where we are today
 
-- **Now:** CNCF graduation, systemd-sysext and confext, TPM and Secure Boot
-- **Next:** full-disk encryption, a more automated release pipeline
+- First OS distribution accepted into the CNCF, at **incubating** level
+- Trusted in production: **Adobe, Giant Swarm, Wipro, 1&1** and many more
+- Used on public clouds, **bare metal** and private clouds alike
+- Behind several **managed Kubernetes** services, with Cluster API support
+- **Stable and reliable:** atomic updates with rollback, every release tested
+- **600+ contributors** and a growing community
+
+---
+
+# What we are doing now, and what is next
+
+- CNCF **incubating**, with graduation on the roadmap
+- New **Steering and Technical committees**, reworked **maintainer roles**
+- Closer alignment with our **Gentoo** upstream packages
+- **Infrastructure overhaul** done, now expanding tests, processes and **platforms**
+- Publishing **VEX files** and automating security triage with **AI**
+- **Next:** TPM chain of trust, scalable release signing, a more automated release pipeline
 - **You:** good first issues, docs, testing new platforms, sysext images
-- Find us: **Project Pavilion, kiosk P-8A**, Hall 5, Cosmic Canyon Zone
-- Shifts: **Tue 3-7 PM, Wed 1:55-5 PM, Thu 12:25-2 PM** (MST)
 
 ---
 
 <!-- _class: closing -->
 <!-- _paginate: false -->
 
-# Secure by design.<br>Open by default.<br>Come build it with us.
+<style scoped>section.closing { padding-bottom: 36px; } section.closing p.closing-meetings { margin-bottom: 12px; }</style>
+
+# Find us at<br>Project Pavilion, kiosk P-8A
 
 <p class="closing-qr-caption"><img src="assets/logos/external/discord-white.svg" alt=""> Join our Discord!</p>
 
 <p class="closing-links">
   <a href="https://flatcar.org"><img src="assets/logos/flatcar-logotype/icon/white/flatcar-icon-white.svg" alt=""> flatcar.org</a>
   <a href="https://github.com/flatcar"><img src="assets/logos/external/github-white.png" alt=""> github.com/flatcar</a>
-  <a href="https://discord.gg/PMYjFUsJyq"><img src="assets/logos/external/discord-white.svg" alt=""> discord.gg/PMYjFUsJyq</a>
+  <a href="https://chat.flatcar.org"><img src="assets/logos/external/discord-white.svg" alt=""> chat.flatcar.org</a>
 </p>
 
 <p class="closing-meetings">
   <span><strong>Office hours</strong> · every 2nd Thu, 16:30 CEST</span>
   <span><strong>Dev sync</strong> · every 4th Thu, 16:30 CEST</span>
 </p>
+
+<p class="closing-cta" style="font-size: 30px; line-height: 1.4; max-width: 1100px"><strong>Hall 5, Cosmic Canyon Zone</strong><br><strong>Shifts (MST):</strong> Tue 3-7 PM, Wed 1:55-5 PM, Thu 12:25-2 PM</p>

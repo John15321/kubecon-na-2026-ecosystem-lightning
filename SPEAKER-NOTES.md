@@ -4,37 +4,27 @@ Lightning talk, 5 minutes, no Q&A. Target about 4:30. Times are cumulative.
 
 ## Slide 1: Cover (0:00 - 0:20)
 
-"Hi everyone, I'm Jan, a Flatcar maintainer and software engineer at Microsoft. In five minutes: where the project stands in the CNCF, how we secure what we ship, and where you can jump in."
+"Hi everyone, I'm Jan, a Flatcar maintainer and software engineer at Microsoft. In five minutes: our mission, what we are doing now, and where you can jump in."
 
-## Slide 2: Growing in the CNCF (0:20 - 1:20)
+## Slide 2: Our mission (0:20 - 1:10)
 
-"Flatcar is a CNCF incubating project, and graduation is on our public roadmap. It is a minimal, immutable OS built for containers, and it runs Kubernetes nodes on the major clouds and on bare metal.
+"Flatcar's mission is simple: a boring, secure OS for running containers. Today we describe everything in our stack as code, except the operating system. That gap is the problem: general-purpose distros drift over time and need patching by hand. Our answer is Operating System as Code. We made the OS immutable: `/usr` is read-only and verified at every boot, and updates are atomic with automatic rollback. It is cloud agnostic: it runs Kubernetes nodes on every major cloud and on bare metal. It is fully free and open-source, and community-driven. And it is secure by default: minimal, signed, and tested before every release."
 
-We ship through four channels: Alpha, Beta, Stable and LTS. Before each release the full test suite runs across the supported clouds, on both amd64 and arm64.
+## Slide 3: Where we are today (1:10 - 2:10)
 
-And the OS keeps getting more modular. Docker and containerd already ship as systemd-sysexts, and Podman and the NVIDIA drivers are official opt-in ones. The core stays small, the ecosystem grows around it."
+"Where are we today? In a good place. In 2024 Flatcar became the first operating system distribution the CNCF accepted, at incubating level, which in CNCF terms means stable and used successfully in production. It is trusted by companies like Adobe, Giant Swarm, Wipro and 1&1, and it runs on public clouds, bare metal and private clouds alike. It sits behind several managed Kubernetes services and works with Cluster API. It is stable and reliable: atomic updates with rollback, and every release tested. And the community is over 600 contributors and growing."
 
-## Slide 3: Supply chain integrity (1:20 - 2:50)
+## Slide 4: What we are doing now, and what is next (2:10 - 4:00)
 
-Walk the pipeline left to right.
+"Flatcar is a CNCF incubating project, and graduation is on our public roadmap. To fit the CNCF governance model, we are adding a Steering Committee and a Technical Committee, so decisions are shared and not tied to a few people. We are also redoing our maintainer roles and structure, because the number of maintainers and subprojects keeps growing. And we are aligning more closely with our upstream, Gentoo, by tracking its packages more tightly.
 
-"Here is how an update gets to your node. Every change is reviewed by a maintainer before it merges. Everything is built from source in an ephemeral environment, never from pre-built binaries. The build produces an SPDX SBOM, generated with syft and published signed next to every image, as `flatcar_production_image_sbom.json`, and it produces SLSA provenance, with per-package provenance shipped inside the image under `/usr/share/SLSA`. The update image is signed with a key that lives in an HSM, in an air-gapped environment. And on your node, dm-verity checks the read-only `/usr` partition at every boot.
+We did an overhaul of our infrastructure, and we are now expanding our tests and processes, and the list of platforms we support. Every release is tested across clouds before it ships. On security, we are publishing VEX files with our releases, so you know which known CVEs actually affect them, and we are making our security triage more automated, with the help of AI.
 
-Our own assessment is SLSA Level 3, and we track the remaining Level 4 items in the open.
+Next: a TPM-based chain of trust, scalable release signing, and a more automated release pipeline. The roadmap is public in the Flatcar repo. Where do you come in? Labelled good first issues and help-wanted items, docs that need love, new platforms and releases that need testing, and sysext images that need maintainers."
 
-Coming soon: we will publish VEX files with every release, so besides the SBOM you get a machine-readable statement of which known CVEs actually affect that release. What is next after that: a TPM-based chain of trust for the build infrastructure, and a more scalable release signing process."
+## Slide 5: Find us at the kiosk (4:00 - 4:30)
 
-## Slide 4: Roadmap, and where you can help (2:50 - 4:00)
-
-"The roadmap is public in the Flatcar repo. Right now: CNCF graduation, systemd-sysext and confext, and the TPM and Secure Boot work. Next: full-disk encryption and a more automated release pipeline.
-
-Where do you come in? There are labelled good first issues and help-wanted items, docs that need love, new platforms and releases that need testing, and sysext images that need maintainers.
-
-Come find us this week at the Project Pavilion, kiosk P-8A in Hall 5, Cosmic Canyon Zone. The Flatcar shifts are Tuesday 3 to 7 p.m., Wednesday 1:55 to 5, and Thursday 12:25 to 2."
-
-## Slide 5: Takeaways (4:00 - 4:30)
-
-"Secure by design, open by default, and come build it with us. We have office hours every second Thursday and a dev sync every fourth. Everything is at flatcar.org and github.com/flatcar, and we are on Discord. Thank you!"
+"Come find us this week at the Project Pavilion, kiosk P-8A, Hall 5, Cosmic Canyon Zone. The shifts are Tuesday 3 to 7 p.m., Wednesday 1:55 to 5, and Thursday 12:25 to 2. Scan the QR code to join our Discord, and we also have office hours every second Thursday and a dev sync every fourth. Everything is at flatcar.org and github.com/flatcar. Thank you!"
 
 ## Reminders
 
@@ -42,5 +32,5 @@ Come find us this week at the Project Pavilion, kiosk P-8A in Hall 5, Cosmic Can
 - Arrive 15 min early, check in at the back, sit stage right in the reserved seats.
 - Own laptop and HDMI adapter. No clicker. Stay near the podium (recorded).
 - No Q&A, no swag or promo.
-- If running long, cut the "on both amd64 and arm64" clause on slide 2 and the sysext paragraph.
-- Facts to re-check before the day: still "incubating" (graduation may have moved), SLSA level wording. SBOM was verified on the release server (signed `flatcar_production_image_sbom.json`).
+- If running long, cut the Gentoo sentence on slide 4.
+- Facts to re-check before the day: slide 3 numbers (600+ contributors is from the Oct 2024 CNCF post), adopter names against ADOPTERS.md; AI triage and VEX wording matches what is actually shipping; still "incubating" (graduation may have moved).

@@ -24,7 +24,12 @@ if [ -n "${D2_CMD}" ] && [ -d assets/diagrams ]; then
         [ -f "$src" ] || continue
         out="${src%.d2}.svg"
         echo "🖼️  d2: ${src} → ${out}"
-        "${D2_CMD}" --theme 0 "$src" "$out" > /dev/null
+        "${D2_CMD}" --theme 0 \
+            --font-regular assets/fonts/Overpass-Regular.ttf \
+            --font-italic assets/fonts/Overpass-Italic.ttf \
+            --font-semibold assets/fonts/Overpass-SemiBold.ttf \
+            --font-bold assets/fonts/Overpass-Bold.ttf \
+            "$src" "$out" > /dev/null
     done
 fi
 
@@ -50,4 +55,18 @@ if [ -f "${OUTPUT}" ]; then
 else
     echo "❌ Build failed: ${OUTPUT} not produced"
     exit 1
+fi
+
+# PowerPoint next to the PDF, generated from the same slides.md. Uses
+# python-pptx and playwright from the system (container image) or via uv on
+# the host; needs Chrome or Chromium. Skipped with a note when missing.
+if [ -f scripts/build-pptx.py ]; then
+    export MARP_CMD
+    if python3 -c "import pptx, playwright" > /dev/null 2>&1; then
+        python3 scripts/build-pptx.py
+    elif command -v uv > /dev/null 2>&1; then
+        uv run --with python-pptx --with playwright python scripts/build-pptx.py
+    else
+        echo "ℹ️  Skipping PowerPoint (needs python-pptx and playwright, or uv)"
+    fi
 fi
