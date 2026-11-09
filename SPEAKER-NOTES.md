@@ -12,19 +12,19 @@ Lightning talk, 5 minutes, no Q&A. Target about 4:30. Times are cumulative.
 
 ## Slide 3: Where we are today (1:10 - 2:10)
 
-"Where are we today? In a good place. In 2024 Flatcar became the first operating system distribution the CNCF accepted, at incubating level, which in CNCF terms means stable and used successfully in production. It is trusted by companies like Adobe, Giant Swarm, Wipro and 1&1, and it runs on public clouds, bare metal and private clouds alike. It sits behind several managed Kubernetes services and works with Cluster API. It is stable and reliable: atomic updates with rollback, and every release tested. And the community is over 600 contributors and growing."
+"Where are we today? In a good place. In 2024 Flatcar became the first operating system distribution the CNCF accepted, at incubating level, which in CNCF terms means stable and used successfully in production. It is trusted by companies like Adobe, Giant Swarm, AT&T and DeepL, and it runs on public clouds, bare metal and private clouds alike. It is stable and reliable: atomic updates with rollback, and every release tested. And the community is over 600 contributors and growing."
 
 ## Slide 4: What we are doing now, and what is next (2:10 - 4:00)
 
-"Flatcar is a CNCF incubating project, and graduation is on our public roadmap. To fit the CNCF governance model, we are adding a Steering Committee and a Technical Committee, so decisions are shared and not tied to a few people. We are also redoing our maintainer roles and structure, because the number of maintainers and subprojects keeps growing. And we are aligning more closely with our upstream, Gentoo, by tracking its packages more tightly.
+"Flatcar is a CNCF incubating project, and we are actively working toward graduation, which is on the horizon. To fit the CNCF governance model, we are adding a Steering Committee and a Technical Committee, so decisions are shared and not tied to a few people. We are also redoing our maintainer roles and structure, because the number of maintainers and subprojects keeps growing. And we are aligning more closely with our upstream, Gentoo, by tracking its packages more tightly.
 
-We did an overhaul of our infrastructure, and we are now expanding our tests and processes, and the list of platforms we support. Every release is tested across clouds before it ships. On security, we are publishing VEX files with our releases, so you know which known CVEs actually affect them, and we are making our security triage more automated, with the help of AI.
+We did an overhaul of our infrastructure, and we are now expanding our tests and processes, and the list of platforms we support. Every release is tested across clouds before it ships. We also did a huge refactor of all our documentation and our website, with the help of professional technical writers from the CNCF. On security, we are publishing VEX files with our releases, so you know which known CVEs actually affect them, and we are making our security triage more automated, with the help of AI.
 
-Next: a TPM-based chain of trust, scalable release signing, and a more automated release pipeline. The roadmap is public in the Flatcar repo. Where do you come in? Labelled good first issues and help-wanted items, docs that need love, new platforms and releases that need testing, and sysext images that need maintainers."
+We are also working on scalable release signing and a more automated release pipeline. The roadmap is public in the Flatcar repo. Where do you come in? Labelled good first issues and help-wanted items, docs that need love, new platforms and releases that need testing, and sysext images that need maintainers."
 
 ## Slide 5: Find us at the kiosk (4:00 - 4:30)
 
-"Come find us this week at the Project Pavilion, kiosk P-8A, Hall 5, Cosmic Canyon Zone. The shifts are Tuesday 3 to 7 p.m., Wednesday 1:55 to 5, and Thursday 12:25 to 2. Scan the QR code to join our Discord, and we also have office hours every second Thursday and a dev sync every fourth. Everything is at flatcar.org and github.com/flatcar. Thank you!"
+"Come find us starting tomorrow at the Project Pavilion, kiosk P-8A, Hall 5, Cosmic Canyon Zone. The shifts are Tuesday 3 to 7 p.m., Wednesday 1:55 to 5, and Thursday 12:25 to 2. Scan the QR code to join our Discord, and we also have office hours every second Thursday and a dev sync every fourth. Everything is at flatcar.org and github.com/flatcar. Thank you!"
 
 ## Reminders
 
@@ -33,4 +33,5 @@ Next: a TPM-based chain of trust, scalable release signing, and a more automated
 - Own laptop and HDMI adapter. No clicker. Stay near the podium (recorded).
 - No Q&A, no swag or promo.
 - If running long, cut the Gentoo sentence on slide 4.
+- Slide 4 is dense: if short on time, trim the docs/website and Gentoo lines.
 - Facts to re-check before the day: slide 3 numbers (600+ contributors is from the Oct 2024 CNCF post), adopter names against ADOPTERS.md; AI triage and VEX wording matches what is actually shipping; still "incubating" (graduation may have moved).

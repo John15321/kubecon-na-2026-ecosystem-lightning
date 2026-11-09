@@ -40,9 +40,8 @@ author: Jan Bronicki
 # Where we are today
 
 - First OS distribution accepted into the CNCF, at **incubating** level
-- Trusted in production: **Adobe, Giant Swarm, Wipro, 1&1** and many more
+- Trusted in production: **Adobe, Giant Swarm, AT&T, DeepL** and many more
 - Used on public clouds, **bare metal** and private clouds alike
-- Behind several **managed Kubernetes** services, with Cluster API support
 - **Stable and reliable:** atomic updates with rollback, every release tested
 - **600+ contributors** and a growing community
 
@@ -50,12 +49,13 @@ author: Jan Bronicki
 
 # What we are doing now, and what is next
 
-- CNCF **incubating**, with graduation on the roadmap
+- CNCF **incubating**, with **graduation on the horizon**
 - New **Steering and Technical committees**, reworked **maintainer roles**
 - Closer alignment with our **Gentoo** upstream packages
 - **Infrastructure overhaul** done, now expanding tests, processes and **platforms**
+- **Docs and website** refactored with CNCF technical writers
 - Publishing **VEX files** and automating security triage with **AI**
-- **Next:** TPM chain of trust, scalable release signing, a more automated release pipeline
+- Scalable **release signing** and a more automated release pipeline
 - **You:** good first issues, docs, testing new platforms, sysext images
 
 ---
@@ -65,7 +65,7 @@ author: Jan Bronicki
 
 <style scoped>section.closing { padding-bottom: 36px; } section.closing p.closing-meetings { margin-bottom: 12px; }</style>
 
-# Find us at<br>Project Pavilion, kiosk P-8A
+# Find us tomorrow at<br>Project Pavilion, kiosk P-8A
 
 <p class="closing-qr-caption"><img src="assets/logos/external/discord-white.svg" alt=""> Join our Discord!</p>
 
